@@ -1,0 +1,352 @@
+EC327: Introduction to Software Engineering
+Fall 2016
+Programming Assignment 3
+	Game_Object constructed.
+	Person constructed.
+	Miner constructed.
+	Game_Object constructed.
+	Person constructed.
+	Miner constructed.
+	Game_Object constructed.
+	Gold_Mine constructed.
+	Game_Object constructed.
+	Gold_Mine constructed.
+	Game_Object constructed.
+	Town_Hall default constructed.
+	Model default constructed.
+Time: 0
+Miner status: M1 at (5,1) moving at speed of 5 towards (0,0) at each step of <0,0>
+	Stopped.
+Miner status: M2 at (10,1) moving at speed of 5 towards (0,0) at each step of <0,0>
+	Stopped.
+Gold Mine status: G1 at location (1,20) containing 100.
+Gold Mine status: G2 at location (10,20) containing 100.
+Town Hall status: T1 at (0,0) contains 0 of gold. Not yet upgraded
+20G1. . . . G2. . . . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. M1. . M2. . . . .
+  0   4   8   12  16  20
+Enter command: m 1 20 20
+Moving M1 to (20,20)
+M1: On my way.
+20G1. . . . G2. . . . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. M1. . M2. . . . .
+  0   4   8   12  16  20
+Enter command: g
+Advancing one tick.
+M1: step...
+Time: 1
+Miner status: M1 at (8.09822,4.92441) moving at speed of 5 towards (20,20) at each step of <3.09822,3.92441>
+Miner status: M2 at (10,1) moving at speed of 5 towards (0,0) at each step of <0,0>
+	Stopped.
+Gold Mine status: G1 at location (1,20) Contains 100.
+Gold Mine status: G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. . . . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . M1. . . . . .
+  . . . . . . . . . . .
+0 t1. . . . M2. . . . .
+  0   4   8   12  16  20
+Enter command: r
+Advancing to next event.
+M1: step...
+M1: step...
+M1: step...
+M1: I’m there!
+Time: 5
+Miner status: M1 at (20,20) moving at speed of 5 towards (20,20) at each step of <3.09822,3.92441>
+	Stopped.
+Miner status: M2 at (10,1) moving at speed of 5 towards (0,0) at each step of <0,0>
+	Stopped.
+Gold Mine status: G1 at location (1,20) Contains 100.
+Gold Mine status: G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. . . . M1
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . M2. . . . .
+  0   4   8   12  16  20
+Enter command: m 2 0 20
+Moving M2 to (0,20)
+M2: On my way.
+20G1. . . . G2. . . . M1
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . M2. . . . .
+  0   4   8   12  16  20
+Enter command: m 2 20 0
+Moving M2 to (20,0)
+M2: On my way.
+20G1. . . . G2. . . . M1
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . M2. . . . .
+  0   4   8   12  16  20
+Enter command: r
+Advancing to next event.
+M2: step...
+M2: step...
+M2: I’m there!
+Time: 8
+Miner status:M1 at (20,20) moving at speed of 5 towards (20,20) at each step of <3.09822,3.92441>
+	Stopped.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. . . . M1
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: w 1 2 1
+Miner 1 mining at Gold_Mine 2 and depositing at Town_Hall 1.
+M1: Yes, my lord.
+20G1. . . . G2. . . . M1
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: g
+Advancing one tick.
+M1: step...
+Time: 9
+Miner status:M1 at (15,20) moving at speed of 5 towards (10,20) at each step of <-5,0>
+	Outbound to a mine.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: s 1
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: g
+Advancing one tick.
+Time: 10
+Miner status:M1 at (15,20) moving at speed of 5 towards (10,20) at each step of <-5,0>
+	Stopped.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: r
+Advancing to next event.
+Time: 15
+Miner status:M1 at (15,20) moving at speed of 5 towards (10,20) at each step of <-5,0>
+	Stopped.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: r
+Advancing to next event.
+Time: 20
+Miner status:M1 at (15,20) moving at speed of 5 towards (10,20) at each step of <-5,0>
+	Stopped.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: r
+Advancing to next event.
+Time: 25
+Miner status:M1 at (15,20) moving at speed of 5 towards (10,20) at each step of <-5,0>
+	Stopped.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: r
+Advancing to next event.
+Time: 30
+Miner status:M1 at (15,20) moving at speed of 5 towards (10,20) at each step of <-5,0>
+	Stopped.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: r
+Advancing to next event.
+Time: 35
+Miner status:M1 at (15,20) moving at speed of 5 towards (10,20) at each step of <-5,0>
+	Stopped.
+Miner status:M2 at (20,0) moving at speed of 5 towards (20,0) at each step of <4.97519,-0.497519>
+	Stopped.
+Gold Mine status:G1 at location (1,20) Contains 100.
+Gold Mine status:G2 at location (10,20) Contains 100.
+Town Hall status: t1 at (0,0) contains 0 of gold.	Not yet upgraded
+20G1. . . . G2. M1. . .
+  . . . . . . . . . . .
+16. . . . . . . . . . .
+  . . . . . . . . . . .
+12. . . . . . . . . . .
+  . . . . . . . . . . .
+8 . . . . . . . . . . .
+  . . . . . . . . . . .
+4 . . . . . . . . . . .
+  . . . . . . . . . . .
+0 t1. . . . . . . . . M2
+  0   4   8   12  16  20
+Enter command: q
+Terminating program.
+	Miner destructed.
+	Person destructed.
+	Game__Object destructed.
+	Miner destructed.
+	Person destructed.
+	Game__Object destructed.
+	Gold_Mine destructed.
+	Game__Object destructed.
+	Gold_Mine destructed.
+	Game__Object destructed.
+	Town_Hall destructed.
+	Game__Object destructed.
+	Model destructed.

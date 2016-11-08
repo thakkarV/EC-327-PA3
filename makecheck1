@@ -1,0 +1,20 @@
+CC = g++
+
+OBJS = checkmain1.o Cart_Point.o Cart_Vector.o
+
+default: PA3check1
+
+PA3check1: $(OBJS)
+	$(CC) -o PA3check1 $(OBJS) 
+
+Cart_Vector.o: Cart_Vector.cpp Cart_Vector.h
+	$(CC) -c Cart_Vector.cpp -o Cart_Vector.o 
+	
+Cart_Point.o: Cart_Point.cpp Cart_Point.h Cart_Vector.h
+	$(CC) -c Cart_Point.cpp -o Cart_Point.o 
+
+checkmain1.o: checkmain1.cpp Cart_Point.h Cart_Vector.h
+	$(CC) -c checkmain1.cpp
+
+clean: 
+	rm $(OBJS) PA3check1

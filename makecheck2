@@ -1,0 +1,26 @@
+CC = g++
+
+OBJS = checkmain2.o Cart_Point.o Cart_Vector.o Game_Object.o Gold_Mine.o
+
+default: PA3check2
+
+PA3check2: $(OBJS)
+	$(CC) -o PA3check2 $(OBJS) 
+
+Cart_Vector.o: Cart_Vector.cpp Cart_Vector.h
+	$(CC) -c Cart_Vector.cpp -o Cart_Vector.o 
+	
+Cart_Point.o: Cart_Point.cpp Cart_Point.h Cart_Vector.h
+	$(CC) -c Cart_Point.cpp -o Cart_Point.o 
+
+Game_Object.o: Game_Object.cpp Game_Object.h Cart_Point.h Cart_Vector.h
+	$(CC) -c Game_Object.cpp -o Game_Object.o 
+
+Gold_Mine.o: Gold_Mine.cpp Gold_Mine.h Game_Object.h Cart_Point.h
+	$(CC) -c Gold_Mine.cpp -o Gold_Mine.o 
+
+checkmain2.o: checkmain2.cpp Cart_Point.h Cart_Vector.h Gold_Mine.h Game_Object.h
+	$(CC) -c checkmain2.cpp
+
+clean: 
+	rm $(OBJS) PA3check2
