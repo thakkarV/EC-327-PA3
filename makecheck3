@@ -1,11 +1,11 @@
 CC = g++
 
-OBJS = checkmain3.o Cart_Point.o Cart_Vector.o Game_Object.o Gold_Mine.o Town_Hall.o
+OBJS = check3.o Cart_Point.o Cart_Vector.o Game_Object.o Gold_Mine.o Town_Hall.o
 
-default: PA3check3
+default: check3
 
-PA3check3: $(OBJS)
-	$(CC) -o PA3check3 $(OBJS) 
+check3: $(OBJS)
+	$(CC) -o check3 $(OBJS) 
 
 Cart_Vector.o: Cart_Vector.cpp Cart_Vector.h
 	$(CC) -c Cart_Vector.cpp -o Cart_Vector.o 
@@ -22,8 +22,8 @@ Gold_Mine.o: Gold_Mine.cpp Gold_Mine.h Game_Object.h Cart_Point.h
 Town_Hall.o: Town_Hall.cpp Town_Hall.h Game_Object.h Cart_Point.h
 	$(CC) -c Town_Hall.cpp -o Town_Hall.o 
 
-checkmain3.o: checkmain3.cpp Cart_Point.h Cart_Vector.h Town_Hall.h
-	$(CC) -c checkmain3.cpp
+check3.o: check3.cpp Cart_Point.h Cart_Vector.h Town_Hall.h
+	$(CC) -c check3.cpp
 
 clean: 
-	rm $(OBJS) PA3check3
+	rm $(OBJS) check3
