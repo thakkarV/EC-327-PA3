@@ -1,6 +1,7 @@
 #ifndef MINER_H
 #define MINER_H
 
+#include "Person.h"
 #include "Cart_Point.h"
 #include "Cart_Vector.h"
 #include "Game_Object.h"
@@ -39,6 +40,8 @@ public:
 	/* NOTE:
 	 |  get_id is defined in Game_Objectc.pp
 	 */
+
+	void show_status();
 
 private:
 

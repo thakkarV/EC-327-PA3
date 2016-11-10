@@ -20,6 +20,7 @@ public:
 
 // NON MEMBER FUNCTIONS
 double cart_distance(const Cart_Point &, const Cart_Point &);
+double FXSQRT(double guess);
 
 // OPERATOR OVERLOADS
 Cart_Point operator + (const Cart_Point &, const Cart_Vector &);
