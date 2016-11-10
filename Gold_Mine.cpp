@@ -14,7 +14,7 @@ Gold_Mine::Gold_Mine() : Game_Object('G', 0, Cart_Point())
 // CONSTRUCTOR: INPUT BASED
 Gold_Mine::Gold_Mine(int inputId, const Cart_Point inputLoc) : Game_Object('G', inputId, inputLoc)
 {
-	// make the game object basedd on the input parameters
+	// make the game object based on the input parameters
 	this-> state = 'f';
 	this-> amount = 100;
 	std::cout << "Gold_Mine constructed." << std::endl;

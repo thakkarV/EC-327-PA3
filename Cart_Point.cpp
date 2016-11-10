@@ -20,12 +20,12 @@ Cart_Point::Cart_Point(double inputx, double inputy)
 }
 
 // NON-MEMBER FUNCTION
-double cart_distance (const Cart_Point & p1, const Cart_Point & p2)
+double cart_distance(const Cart_Point & p1, const Cart_Point & p2)
 {
 	double distance;
 	// sum the square of the difference of each vector component
-	distance = pow((p1.x - p2.x), 2) + pow((p1.y - p2.y), 2);
-	return sqrt(distance);
+	distance = ((p1.x - p2.x) * (p1.x - p2.x)) + ((p1.y - p2.y) * (p1.y - p2.y));
+	return FXSQRT(distance);
 }
 
 // OPERATOR OVERLOAD
@@ -51,4 +51,29 @@ std::ostream & operator << (std::ostream & out, const Cart_Point & p1)
 {
 	out << "(" << p1.x << ", " << p1.y << ")";
 	return out;
+}
+
+// NON MEMBER FUNCTION: fast approximate square root
+double FXSQRT(double guess)
+{
+	// ITS FROM QUAKE III ARENA ?!?!?!? HOLY SHIT.....
+	// implementing the what the fuck algorithem with the magic hex...
+	// i have no clue how this works and hoestly as this point...
+	// i don't give a fyling fuck !
+
+	double halfGuess = 0.5 * guess;
+	
+	// evil floating point bit level hacking
+	long i = *(long *) &guess;
+	i = 0x5fe6eb50c7b537a9 - (i >> 1);
+	guess = *(double *) &i;
+
+	// i cant even anymore...
+	guess = guess * (1.5 - halfGuess * guess * guess);
+	guess = guess * (1.5 - halfGuess * guess * guess);
+	guess = guess * (1.5 - halfGuess * guess * guess);
+
+	// lets just be done with this shit now...
+	guess = 1 / guess;
+	return guess;
 }
